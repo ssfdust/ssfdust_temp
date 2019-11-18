@@ -2,7 +2,7 @@ FROM python:latest
 
 ENV FLASK_ENV=production
 
-RUN pip install poetry invoke
+RUN pip install poetry invoke gunicorn
 
 RUN mkdir Application
 
