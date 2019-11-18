@@ -2,7 +2,7 @@ FROM python:latest
 
 ENV FLASK_ENV=production
 
-RUN pip install poetry invoke colorlog
+RUN pip install poetry invoke
 
 RUN mkdir Application
 
@@ -14,3 +14,5 @@ ADD pyproject.toml /Application/
 
 RUN poetry config settings.virtualenvs.create false \
   && poetry install --no-dev --no-interaction --no-ansi
+
+ENTRYPOINT ["bash" "scripts/initapp.sh"]
