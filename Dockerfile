@@ -15,4 +15,4 @@ ADD pyproject.toml /Application/
 RUN poetry config settings.virtualenvs.create false \
   && poetry install --no-dev --no-interaction --no-ansi
 
-ENTRYPOINT ["bash" "scripts/initapp.sh"]
+ENTRYPOINT ["scripts/initapp.sh"]
